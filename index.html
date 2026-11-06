@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canuckle Hint &amp; Answer Today – Spoiler-Free Hint Helper</title>
+<meta name="description" content="Stuck on today’s Canuckle? Enter your guesses and tile colours to get spoiler-free hints step by step – topic, letters, first letter and the best next guess – before you check today’s answer.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Canuckle Hint &amp; Answer Today – Spoiler-Free Hint Helper">
+<meta property="og:description" content="Gentle Canuckle hints first, the answer only when you want it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Canuckle Hint Helper",
+      "applicationCategory":"GameApplication",
+      "operatingSystem":"Browser",
+      "inLanguage":"en",
+      "description":"Spoiler-free hint helper for the Canuckle word game: enter guesses and tile colours to get step-by-step hints, a letter tracker and possible Canadian answers.",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}
+    },
+    {
+      "@type":"HowTo",
+      "name":"How to get a spoiler-free Canuckle hint",
+      "step":[
+        {"@type":"HowToStep","name":"Enter your guesses","text":"Type each word you have guessed in today’s Canuckle and add it to the helper."},
+        {"@type":"HowToStep","name":"Copy the tile colours","text":"Tap each tile until it shows the same colour as in the game: grey, gold or red."},
+        {"@type":"HowToStep","name":"Open one hint at a time","text":"Start with the topic hint and only open the next one if you are still stuck."}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Where can I find today’s Canuckle answer?","acceptedAnswer":{"@type":"Answer","text":"The official daily hints and today’s answer are published on the Canuckle hints page of canukle.com. This helper gives you gentle clues first, so you can still solve the puzzle yourself."}},
+        {"@type":"Question","name":"Does this helper know today’s answer?","acceptedAnswer":{"@type":"Answer","text":"No. It works only from the guesses and colours you enter and compares them with a list of Canadian-themed five-letter words. If the answer is not on that list, the helper will tell you."}},
+        {"@type":"Question","name":"How do I enter my tile colours?","acceptedAnswer":{"@type":"Answer","text":"Type your guess, add it, then tap each tile until it matches the colour you saw in the game: grey for not in the word, gold for the wrong spot and red for the right spot."}},
+        {"@type":"Question","name":"Will using hints spoil the puzzle?","acceptedAnswer":{"@type":"Answer","text":"Only if you want it to. The hints are revealed one step at a time, a spoiler meter shows how much you have uncovered, and the possible words stay hidden until you press reveal."}},
+        {"@type":"Question","name":"What is the best first word for Canuckle?","acceptedAnswer":{"@type":"Answer","text":"Words with several common vowels and consonants, such as AROSE or RAISE, rule out the most answers. CANOE is a popular Canadian-themed opener that tests four vowels at once."}},
+        {"@type":"Question","name":"What are the official Canuckle hints?","acceptedAnswer":{"@type":"Answer","text":"Inside the game, the hint button reveals three clues one by one: how many vowels the word has, whether a letter repeats, and the first letter."}},
+        {"@type":"Question","name":"Why does the helper show no words?","acceptedAnswer":{"@type":"Answer","text":"Usually one tile colour was entered incorrectly. Check every tile against the game. If they are correct, today’s answer is simply not in the helper’s word list."}},
+        {"@type":"Question","name":"Is it cheating to use hints?","acceptedAnswer":{"@type":"Answer","text":"Canuckle is a game for fun, so how much help you use is up to you. Many players use a single small hint to keep their streak going and still enjoy solving the rest themselves."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="hd">
+  <div class="wrap hd-in">
+    <a href="#" class="logo" aria-label="Canuckle Hint Helper home">
+      <span class="logo-q" aria-hidden="true">?</span>
+      <span>Canuckle<b>Hint</b></span>
+    </a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.nav').classList.toggle('open')"><span></span><span></span></button>
+    <nav class="nav">
+      <a href="#" class="cur">Hint Helper</a>
+      <a href="#guide">Hint Guide</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="date-chip" id="today">Today</span>
+      <h1>Canuckle Hint &amp; Answer <span>Today</span></h1>
+      <p class="lead-hero">Stuck on today’s <a href="https://canukle.com/">Canuckle</a>? Don’t jump straight to the answer. Enter the guesses you have made so far and get small, spoiler-free nudges – one step at a time. When you really want the solution, the official <a href="https://canukle.com/canuckle-hint/">Canuckle Hints</a> page has today’s clues and answer.</p>
+      <div class="hero-stats">
+        <div><b>5</b><span>hint levels</span></div>
+        <div><b>98</b><span>Canadian words</span></div>
+        <div><b>0</b><span>spoilers until you ask</span></div>
+      </div>
+      <a href="#helper" class="hero-cta">Get a hint ↓</a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-card">
+        <div class="art-row"><i class="a">C</i><i class="a">A</i><i class="a">N</i><i class="p">O</i><i class="p">E</i></div>
+        <div class="art-row"><i class="p">S</i><i class="a">T</i><i class="p">O</i><i class="p">R</i><i class="a">M</i></div>
+        <div class="art-row"><i class="e"></i><i class="e"></i><i class="e"></i><i class="e"></i><i class="e"></i></div>
+        <div class="art-bubble b1">💡 Topic: Slang</div>
+        <div class="art-bubble b2">🔤 Starts with H</div>
+        <div class="art-bubble b3">✅ 1 word left</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="helper" id="helper" aria-label="Canuckle hint helper">
+    <div class="h-in">
+      <div class="h-step"><span>1</span><div><h2>Enter your guesses</h2><p>Type a guess, add it, then <b>tap the tiles</b> until they match the colours from the game.</p></div></div>
+      <div class="add">
+        <input type="text" id="g-in" maxlength="5" placeholder="Type a guess" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Your guess">
+        <button type="button" id="g-add">Add guess</button>
+      </div>
+      <p class="err" id="err" role="alert"></p>
+      <div class="rows" id="rows"></div>
+      <div class="legend">
+        <span><i class="a"></i>Grey – not in word</span>
+        <span><i class="p"></i>Gold – wrong spot</span>
+        <span><i class="c"></i>Red – right spot</span>
+      </div>
+      <div class="h-btns">
+        <button type="button" class="ghost" id="ex">▶ Load example</button>
+        <button type="button" class="ghost" id="clr">Clear all</button>
+      </div>
+      <div class="tracker">
+        <h3>Letter tracker</h3>
+        <div class="abc" id="abc"></div>
+        <p class="small">Updates from your tiles: red and gold letters are in the word, grey ones are out, white ones are still unused.</p>
+      </div>
+    </div>
+
+    <div class="h-out" aria-live="polite">
+      <div class="h-step"><span>2</span><div><h2>Take a hint</h2><p>Open one card at a time – stop as soon as the word clicks.</p></div></div>
+      <div class="count"><b id="cnt">98</b><span id="cnt-t">possible Canadian words</span></div>
+      <div class="meter"><div class="meter-top"><span>Spoiler meter</span><b id="meter-l">No hints used</b></div><div class="meter-bar"><i id="meter-bar"></i></div></div>
+      <ol class="ladder">
+        <li><button type="button" data-h="1"><span class="n">1</span><span class="t">Topic<small>Gentle</small></span></button><p id="h1" class="hid"></p></li>
+        <li><button type="button" data-h="2"><span class="n">2</span><span class="t">Letters<small>Gentle</small></span></button><p id="h2" class="hid"></p></li>
+        <li><button type="button" data-h="3"><span class="n">3</span><span class="t">First letter<small>Strong</small></span></button><p id="h3" class="hid"></p></li>
+        <li><button type="button" data-h="4"><span class="n">4</span><span class="t">Best next guess<small>Strong</small></span></button><p id="h4" class="hid"></p></li>
+        <li class="spoil"><button type="button" data-h="5"><span class="n">!</span><span class="t">Reveal possible words<small>Spoiler</small></span></button><div id="h5" class="hid words"></div></li>
+      </ol>
+      <p class="small">Suggestions come from a list of 98 Canadian-themed five-letter words. Today’s real answer may not be on it – the official hints page always has it.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="guide">
+    <div class="sec-head"><p class="kick">How it works</p><h2>Three steps to an honest hint</h2></div>
+    <div class="how3">
+      <article><div class="ic-wrap"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 7h16M4 12h10M4 17h7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg></div><h3>Copy your board</h3><p>Add each word you have already played and tap the tiles to the same grey, gold or red you see in the game.</p></article>
+      <article><div class="ic-wrap"><svg viewBox="0 0 24 24" width="26" height="26"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2.2" fill="none"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div><h3>We narrow it down</h3><p>The helper checks every Canadian word in its list against your colours and keeps only those that could still be the answer.</p></article>
+      <article><div class="ic-wrap"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg></div><h3>You choose the help</h3><p>Open a gentle hint first. The spoiler meter shows how much you have uncovered, so you stay in control.</p></article>
+    </div>
+  </section>
+
+  <section class="sec walk">
+    <div class="sec-head"><p class="kick">Worked example</p><h2>From 98 words to the answer in two guesses</h2>
+    <p class="lead">Here is how the helper narrows things down on a real example – try it yourself with the “Load example” button.</p></div>
+    <div class="walk-steps">
+      <div class="ws"><div class="ws-num">98</div><div class="ws-body"><h3>Before any guess</h3><p>Every Canadian word in the list is still possible – wildlife, food, places, sports and slang.</p></div></div>
+      <div class="ws"><div class="ws-num">4</div><div class="ws-body"><h3>After CANOE</h3><div class="mini-row"><i class="a">C</i><i class="a">A</i><i class="a">N</i><i class="p">O</i><i class="p">E</i></div><p>O and E are in the word, but not where we put them. Only four words fit: <b>HOSER, OTTER, TOTEM</b> and <b>TOWER</b>.</p></div></div>
+      <div class="ws"><div class="ws-num">1</div><div class="ws-body"><h3>After STORM</h3><div class="mini-row"><i class="p">S</i><i class="a">T</i><i class="p">O</i><i class="p">R</i><i class="a">M</i></div><p>No T means OTTER, TOTEM and TOWER are out. S and R are in the word – the only answer left is <b>HOSER</b>.</p></div></div>
+    </div>
+  </section>
+
+  <section class="sec split">
+    <div>
+      <p class="kick">Start strong</p>
+      <h2>Best first words for Canuckle</h2>
+      <p>We tested common openers against all 98 Canadian words in the helper. The number shows how many words, on average, are still possible after that first guess – lower is better.</p>
+      <p class="note">Classic all-rounders do best, but CANOE is a close, on-theme alternative that tests four vowels in one go.</p>
+    </div>
+    <div class="starters">
+      <div class="st"><span>AROSE</span><i style="--w:18%"></i><b>3.0</b></div>
+      <div class="st"><span>RAISE</span><i style="--w:18%"></i><b>3.0</b></div>
+      <div class="st"><span>SLATE</span><i style="--w:20%"></i><b>3.3</b></div>
+      <div class="st canada"><span>CANOE</span><i style="--w:24%"></i><b>4.0</b></div>
+      <div class="st"><span>STORM</span><i style="--w:34%"></i><b>5.7</b></div>
+      <div class="st"><span>MAPLE</span><i style="--w:47%"></i><b>8.0</b></div>
+      <div class="st"><span>TOQUE</span><i style="--w:50%"></i><b>8.5</b></div>
+      <p class="small">Average words left after the first guess (98-word Canadian list).</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head"><p class="kick">Play fair, finish proud</p><h2>The Canuckle hint ladder</h2>
+    <p class="lead">The best hint is the smallest one that gets you moving again. Climb one rung at a time and stop as soon as the word clicks.</p></div>
+    <div class="rungs">
+      <div><b>1</b><h3>Re-read your tiles</h3><p>Write down every red and gold letter and where it cannot go. Half of all “stuck” moments end here.</p></div>
+      <div><b>2</b><h3>Think about the topic</h3><p>Is it an animal, a food, a place or a bit of slang? The Canadian theme cuts the list down fast.</p></div>
+      <div><b>3</b><h3>Count the vowels</h3><p>Knowing whether the word has one, two or three vowels rules out whole families of words.</p></div>
+      <div><b>4</b><h3>Check for repeats</h3><p>GOOSE, TAFFY or POPPY hide a double letter that is easy to miss.</p></div>
+      <div><b>5</b><h3>Use the first letter</h3><p>The strongest clue of all – save it for your last one or two guesses.</p></div>
+      <div class="last"><b>6</b><h3>Look up the answer</h3><p>No shame in it. Read the fun fact and you will know the word next time.</p></div>
+    </div>
+  </section>
+
+  <section class="sec vs">
+    <div class="vs-card hint"><h3>Take a hint when…</h3><ul><li>you have one or two guesses left and several options</li><li>you know most letters but can’t think of the word</li><li>you want to keep your streak without seeing the answer</li></ul></div>
+    <div class="vs-card answer"><h3>Check the answer when…</h3><ul><li>you have used all six guesses</li><li>the helper shows zero words and your colours are right</li><li>you simply want to learn today’s word and its fun fact</li></ul></div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head"><p class="kick">Spot the pattern</p><h2>Common shapes of Canadian answers</h2></div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Pattern</th><th>What to look for</th><th>Example words</th></tr></thead>
+        <tbody>
+          <tr><td>Double vowel</td><td>Two Os or two Es side by side</td><td>MOOSE, GOOSE, GEESE</td></tr>
+          <tr><td>Double consonant</td><td>FF, PP or RR in the middle</td><td>TAFFY, POPPY, FERRY</td></tr>
+          <tr><td>Ends in -E</td><td>A silent E after a consonant</td><td>MAPLE, CANOE, TOQUE</td></tr>
+          <tr><td>Ends in -S</td><td>Plural animals and things</td><td>LOONS, PUCKS, CURDS</td></tr>
+          <tr><td>Ends in -ER</td><td>People, places and slang</td><td>HOSER, TOWER, OTTER</td></tr>
+          <tr><td>Indigenous origin</td><td>Unusual letter combinations</td><td>KAYAK, IGLOO, HAIDA</td></tr>
+          <tr><td>Slang</td><td>Words you won’t hear south of the border</td><td>HYDRO, GITCH, TOQUE</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="sec split">
+    <div>
+      <p class="kick">Inside the game</p>
+      <h2>The three built-in Canuckle hints</h2>
+      <p>The game itself offers three clues behind its hint button, revealed one by one. Each is designed to help without giving the whole word away – and they combine perfectly with this helper.</p>
+    </div>
+    <div class="types">
+      <div><span>01</span><div><h3>Number of vowels</h3><p>Tells you how many of A, E, I, O and U appear – a great way to rule out guesses.</p></div></div>
+      <div><span>02</span><div><h3>Repeated letter</h3><p>Says whether any letter appears twice, so you stop hunting for five different ones.</p></div></div>
+      <div><span>03</span><div><h3>First letter</h3><p>Gives away the opening letter – usually enough to finish within one or two guesses.</p></div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head"><p class="kick">FAQ</p><h2>Canuckle hint &amp; answer questions</h2></div>
+    <div class="faq">
+      <details open><summary>Where can I find today’s Canuckle answer?</summary><p>The official daily hints and today’s answer are published on the Canuckle hints page of canukle.com. This helper gives you gentle clues first, so you can still solve the puzzle yourself.</p></details>
+      <details><summary>Does this helper know today’s answer?</summary><p>No. It works only from the guesses and colours you enter and compares them with a list of Canadian-themed five-letter words. If the answer is not on that list, the helper will tell you.</p></details>
+      <details><summary>How do I enter my tile colours?</summary><p>Type your guess, add it, then tap each tile until it matches the colour you saw in the game: grey for not in the word, gold for the wrong spot and red for the right spot.</p></details>
+      <details><summary>Will using hints spoil the puzzle?</summary><p>Only if you want it to. The hints are revealed one step at a time, a spoiler meter shows how much you have uncovered, and the possible words stay hidden until you press reveal.</p></details>
+      <details><summary>What is the best first word for Canuckle?</summary><p>Words with several common vowels and consonants, such as AROSE or RAISE, rule out the most answers. CANOE is a popular Canadian-themed opener that tests four vowels at once.</p></details>
+      <details><summary>What are the official Canuckle hints?</summary><p>Inside the game, the hint button reveals three clues one by one: how many vowels the word has, whether a letter repeats, and the first letter.</p></details>
+      <details><summary>Why does the helper show no words?</summary><p>Usually one tile colour was entered incorrectly. Check every tile against the game. If they are correct, today’s answer is simply not in the helper’s word list.</p></details>
+      <details><summary>Is it cheating to use hints?</summary><p>Canuckle is a game for fun, so how much help you use is up to you. Many players use a single small hint to keep their streak going and still enjoy solving the rest themselves.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="ft" id="contact">
+  <div class="wrap ft-in">
+    <div>
+      <span class="logo"><span class="logo-q" aria-hidden="true">?</span><span>Canuckle<b>Hint</b></span></span>
+      <p>Spoiler-free help for the daily Canadian word game.</p>
+    </div>
+    <nav>
+      <a href="#helper">Hint Helper</a>
+      <a href="#guide">Hint Guide</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy</a>
+    </nav>
+  </div>
+  <p class="wrap ft-copy">© <span id="yr"></span> Canuckle Hint · Helper tool for the daily Canadian word game.</p>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  var POOL=[["APPLE","Food"],["ASPEN","Nature"],["BACON","Food"],["BAGEL","Food"],["BANFF","Places"],["BEADS","Culture"],["BEANS","Food"],["BEARS","Wildlife"],["BIRCH","Nature"],["BISON","Wildlife"],["BLADE","Sports"],["BOARD","Sports"],["BROOM","Sports"],["CABIN","Culture"],["CANOE","Culture"],["CEDAR","Nature"],["CIDER","Food"],["COAST","Places"],["CRANE","Wildlife"],["CREEK","Nature"],["CROWN","History"],["CURDS","Food"],["DEKES","Sports"],["DONUT","Food"],["DULSE","Food"],["EAGLE","Wildlife"],["FALLS","Places"],["FERRY","Places"],["FLAGS","History"],["FROST","Nature"],["FUDGE","Food"],["GEESE","Wildlife"],["GITCH","Slang"],["GOALS","Sports"],["GOOSE","Wildlife"],["GRAVY","Food"],["HAIDA","Culture"],["HARES","Wildlife"],["HERON","Wildlife"],["HOOPS","Sports"],["HOSER","Slang"],["HOUSE","Sports"],["HURON","Places"],["HYDRO","Slang"],["ICING","Sports"],["IGLOO","Culture"],["INUIT","Culture"],["KAYAK","Culture"],["LAKES","Nature"],["LEAFS","Sports"],["LOONS","Wildlife"],["MAPLE","Nature"],["METIS","Culture"],["MOOSE","Wildlife"],["NORTH","Places"],["OCEAN","Places"],["ORCAS","Wildlife"],["OTTER","Wildlife"],["PARKA","Culture"],["PELTS","History"],["PHONE","History"],["PINES","Nature"],["POLAR","Wildlife"],["POPPY","History"],["PUCKS","Sports"],["RAVEN","Culture"],["RINKS","Sports"],["RIVER","Nature"],["ROCKY","Places"],["SCONE","Food"],["SEALS","Wildlife"],["SKATE","Sports"],["SKIER","Sports"],["SLEDS","Culture"],["SNOWY","Wildlife"],["SORRY","Slang"],["SPIKE","History"],["STICK","Sports"],["STONE","Sports"],["STORM","Nature"],["SUGAR","Food"],["SWEEP","Sports"],["SYRUP","Food"],["TAFFY","Food"],["TAIGA","Nature"],["TARTS","Food"],["TIDES","Nature"],["TOQUE","Slang"],["TOTEM","Culture"],["TOWER","Places"],["TRAIL","Places"],["TRAIN","History"],["TROUT","Wildlife"],["TUQUE","Slang"],["WHALE","Wildlife"],["WHEAT","Food"],["WINDS","Nature"],["YUKON","Places"]];
+  var rows=[], shown=0;
+  var CYCLE={a:'p',p:'c',c:'a'};
+
+  function score(g,a){
+    var res=['a','a','a','a','a'], pool={};
+    for(var i=0;i<5;i++){ if(g[i]===a[i]) res[i]='c'; else pool[a[i]]=(pool[a[i]]||0)+1; }
+    for(i=0;i<5;i++){ if(res[i]!=='c' && pool[g[i]]){ res[i]='p'; pool[g[i]]--; } }
+    return res.join('');
+  }
+  function cands(){ return POOL.filter(function(x){ return rows.every(function(r){ return score(r.w,x[0])===r.s.join(''); }); }); }
+
+  function renderRows(){
+    $('rows').innerHTML=rows.map(function(r,ri){
+      return '<div class="grow"><div class="gtiles">'+r.w.split('').map(function(ch,i){ return '<button type="button" class="gt '+r.s[i]+'" data-r="'+ri+'" data-i="'+i+'" aria-label="Letter '+ch+', tap to change colour">'+ch+'</button>'; }).join('')+'</div><button type="button" class="del" data-del="'+ri+'" aria-label="Remove guess">×</button></div>';
+    }).join('') || '<p class="empty">No guesses yet – add your first one above.</p>';
+    update();
+  }
+
+  function update(){
+    var c=cands();
+    $('cnt').textContent=c.length;
+    $('cnt-t').textContent=c.length===1?'possible Canadian word':'possible Canadian words';
+    $('cnt').className=c.length===0?'zero':'';
+    // hint 1: topic
+    var cats={}; c.forEach(function(x){ cats[x[1]]=(cats[x[1]]||0)+1; });
+    var top=Object.keys(cats).sort(function(a,b){return cats[b]-cats[a];});
+    $('h1').textContent=!c.length?'No match – check your tile colours.':(top.length===1?'The word is about: '+top[0]+'.':'Most likely topic: '+top[0]+(top[1]?' (or '+top[1]+')':'')+'.');
+    // hint 2: letters
+    var known={}, grey={};
+    rows.forEach(function(r){ r.s.forEach(function(s,i){ if(s!=='a') known[r.w[i]]=1; }); });
+    rows.forEach(function(r){ r.s.forEach(function(s,i){ if(s==='a' && !known[r.w[i]]) grey[r.w[i]]=1; }); });
+    var used={}; rows.forEach(function(r){ r.w.split('').forEach(function(ch){used[ch]=1;}); });
+    var freq={}; c.forEach(function(x){ var seen={}; x[0].split('').forEach(function(ch){ if(!used[ch] && !seen[ch]){ freq[ch]=(freq[ch]||0)+1; seen[ch]=1; } }); });
+    var best=Object.keys(freq).sort(function(a,b){return freq[b]-freq[a];}).slice(0,3);
+    var vow=c.length===1?c[0][0].split('').filter(function(ch){return 'AEIOU'.indexOf(ch)>-1;}).length:null;
+    var t2=[];
+    if(Object.keys(known).length) t2.push('Confirmed letters: '+Object.keys(known).join(', ')+'.');
+    if(best.length && c.length>1) t2.push('Try letters you haven’t used yet: '+best.join(', ')+'.');
+    if(vow!==null) t2.push('The word has '+vow+(vow===1?' vowel.':' vowels.'));
+    $('h2').textContent=!c.length?'No match – check your tile colours.':(t2.join(' ')||'Add a guess first to get letter hints.');
+    // hint 3: first letter
+    var firsts={}; c.forEach(function(x){ firsts[x[0][0]]=1; });
+    var fl=Object.keys(firsts).sort();
+    $('h3').textContent=!c.length?'No match – check your tile colours.':(fl.length===1?'It starts with '+fl[0]+'.':(fl.length<=5?'It starts with one of: '+fl.join(', ')+'.':'Still '+fl.length+' possible first letters – add another guess first.'));
+    // hint 4: best next guess
+    var lf={}; c.forEach(function(x){ var s={}; x[0].split('').forEach(function(ch){ if(!s[ch]){lf[ch]=(lf[ch]||0)+1; s[ch]=1;} }); });
+    var pick=null, ps=-1;
+    c.forEach(function(x){ var s={}, v=0; x[0].split('').forEach(function(ch){ if(!s[ch]){ v+=lf[ch]*(used[ch]?0.3:1); s[ch]=1; } }); if(v>ps){ps=v;pick=x[0];} });
+    $('h4').textContent=!c.length?'No match – check your tile colours.':(c.length===1?'Only one word fits – you’ve got this!':'A guess that splits the remaining words well: '+pick+'.');
+    // letter tracker
+    var st={};
+    rows.forEach(function(r){ r.s.forEach(function(s,i){ var ch=r.w[i], p=st[ch]; if(s==='c') st[ch]='c'; else if(s==='p'){ if(p!=='c') st[ch]='p'; } else if(!p) st[ch]='a'; }); });
+    $('abc').innerHTML='QWERTYUIOPASDFGHJKLZXCVBNM'.split('').map(function(ch){ return '<i class="'+(st[ch]||'')+'">'+ch+'</i>'; }).join('');
+    // hint 5: words
+    $('h5').innerHTML=!c.length?'<p>No Canadian word in our list fits. Double-check the colours, or open the official hints page.</p>':c.slice(0,40).map(function(x){return '<span>'+x[0]+'<em>'+x[1]+'</em></span>';}).join('')+(c.length>40?'<p>…and '+(c.length-40)+' more</p>':'');
+  }
+
+  function add(){
+    var v=$('g-in').value.trim().toUpperCase();
+    if(!/^[A-Z]{5}$/.test(v)){ $('err').textContent='Please enter exactly five letters.'; return; }
+    if(rows.length>=6){ $('err').textContent='Canuckle only allows six guesses.'; return; }
+    $('err').textContent='';
+    rows.push({w:v,s:['a','a','a','a','a']}); $('g-in').value=''; renderRows(); $('g-in').focus();
+  }
+  $('g-add').addEventListener('click',add);
+  $('g-in').addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); add(); } });
+  $('g-in').addEventListener('input',function(){ this.value=this.value.replace(/[^a-zA-Z]/g,'').toUpperCase(); });
+  $('rows').addEventListener('click',function(e){
+    var t=e.target.closest('.gt'), d=e.target.closest('.del');
+    if(t){ var r=rows[+t.dataset.r]; r.s[+t.dataset.i]=CYCLE[r.s[+t.dataset.i]]; renderRows(); }
+    if(d){ rows.splice(+d.dataset.del,1); renderRows(); }
+  });
+  var LV=['No hints used','Gentle help','Gentle help','Strong help','Strong help','Fully spoiled'];
+  function meter(){
+    var open=[].slice.call(document.querySelectorAll('.ladder li.open')).map(function(li){return +li.querySelector('button').dataset.h;});
+    var lvl=open.length?Math.max.apply(null,open):0;
+    $('meter-bar').style.width=(lvl/5*100)+'%';
+    $('meter-bar').className='l'+lvl;
+    $('meter-l').textContent=LV[lvl];
+  }
+  document.querySelectorAll('.ladder button').forEach(function(b){
+    b.addEventListener('click',function(){ var el=$('h'+b.dataset.h); el.classList.toggle('hid'); var on=!el.classList.contains('hid'); b.classList.toggle('open',on); b.parentNode.classList.toggle('open',on); meter(); });
+  });
+  $('ex').addEventListener('click',function(){
+    rows=[{w:'CANOE',s:['a', 'a', 'a', 'p', 'p']}];
+    renderRows();
+  });
+  $('clr').addEventListener('click',function(){ rows=[]; renderRows(); document.querySelectorAll('.ladder p,.ladder .words').forEach(function(x){x.classList.add('hid');}); document.querySelectorAll('.ladder button,.ladder li').forEach(function(x){x.classList.remove('open');}); meter(); });
+
+  var d=new Date();
+  $('today').textContent='Hints for '+d.toLocaleDateString('en-CA',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+  document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.nav').classList.remove('open');});});
+  $('yr').textContent=d.getFullYear();
+  renderRows();
+})();
+</script>
+</body>
+</html>
